@@ -23,10 +23,10 @@
     box-sizing: border-box;
     overflow: hidden;
   }
-  #skip-btn {
+  /* #skip-btn {
     padding: 5px 30px;
     font-size: 16px;
-  }
+  } */
   #send-btn {
     padding: 5px 30px;
     font-size: 16px;
@@ -46,10 +46,10 @@
     grid-template-columns: auto;
     grid-template-rows: 8% 40% auto 7%;
     grid-template-areas:
-      'top'
-      'vid'
-      'msg'
-      'inp';
+      "top"
+      "vid"
+      "msg"
+      "inp";
   }
 
   /* top bar styles */
@@ -72,7 +72,7 @@
   }
 
   /* video container */
-  #videos {
+  #logo.png {
     margin: 10px;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
@@ -94,10 +94,11 @@
     box-sizing: border-box;
     overflow: hidden;
   }
-  #skip-btn {
+  /* #skip-btn {
     padding: 5px 30px;
     font-size: 16px;
-  }
+    background-color: #0077c2;
+  } */
   #send-btn {
     display: none;
   }
@@ -115,7 +116,7 @@
 
 @media (max-width: 550px) {
   /* video container */
-  #videos {
+  #logo.png {
     margin: 10px;
     grid-template-rows: 1fr 0fr;
     grid-template-columns: auto;
@@ -148,4 +149,14 @@
   #feedback-btn {
     display: none;
   }
+}
+header {
+  width: 97vw;
+}
+
+#watermark {
+  height: 128px;
+  /* width: 128px; */
+  width: auto;
+  bottom: 0;
 }

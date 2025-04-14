@@ -28,10 +28,10 @@
     min-width: 75vw;
     max-width: 75vw;
   }
-  
-  #instructions {
-    font-size: 1.2rem;
-  }
+
+  /* #instructions {
+    font-size: 1rem;
+  } */
 
   #options-container {
     flex-direction: column;
@@ -68,11 +68,6 @@
   #chat-options > p {
     margin-top: 0;
   }
-
-  #button-container button {
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-  }
 }
 
 @media (max-width: 700px) {
@@ -86,10 +81,10 @@
 }
 
 @media (max-width: 500px) {
-  #social-message{
+  #social-message {
     justify-content: center;
   }
-  
+
   #feedback-btn {
     display: none;
   }
@@ -99,13 +94,17 @@
   }
 
   #message-content {
-    width: 80%
+    width: 80%;
   }
   #message-image {
     display: none;
   }
 
-  #instructions {
+  /* #instructions {
     font-size: 3.5vw;
-  }
+  } */
+}
+
+i {
+  margin: auto 5px;
 }

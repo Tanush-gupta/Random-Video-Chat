@@ -1,19 +1,19 @@
-# Ajnabee - Anonymous Peer-to-Peer Video Chat
+# Aaggu - Anonymous Peer-to-Peer Video Chat
 
-Ajnabee is an Omegle-inspired web application that enables users to engage in anonymous video chats with random peers.
+Aaggu is an Omegle-inspired web application that enables users to engage in anonymous video chats with random peers.
 
 ## Setup and Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/AkashKarnatak/Ajnabee.git
+   git clone https://github.com/AkashKarnatak/Aaggu.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd Ajnabee
+   cd Aaggu
    ```
 
 3. Install dependencies:
@@ -28,6 +28,7 @@ Ajnabee is an Omegle-inspired web application that enables users to engage in an
    echo 'export const WEBSOCKET_URL = "ws://localhost:8080"' >> public/js/env.js
    export SERVER_PORT=8080
    ```
+
    Make sure the above ports match.
 
 5. Start the server:
