@@ -70,7 +70,6 @@ header {
 .logo img {
   display: block;
   height: 156px;
-  /* width: 128px; */
   width: auto;
 }
 
@@ -127,9 +126,11 @@ header {
 }
 #peer img {
   position: absolute;
-  width: 25%;
-  left: 10px;
-  bottom: 10px;
+  /* width: 25%; */
+  /* height: 150px; */
+  width: 130px;
+  left: 18px;
+  bottom: -20px;
   z-index: 10;
   opacity: 0.7;
 }
@@ -199,7 +200,7 @@ header {
 }
 
 #skip-btn {
-  border-radius: 8px;
+  border-radius: 6px;
   padding-top: 14px;
   padding-right: 32px;
   padding-bottom: 14px;
@@ -237,7 +238,7 @@ header {
 }
 
 #send-btn {
-  border-radius: 8px;
+  border-radius: 6px;
   padding-top: 14px;
   padding-right: 32px;
   padding-bottom: 14px;
