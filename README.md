@@ -7,7 +7,7 @@ Aaggu is an Omegle-inspired web application that enables users to engage in anon
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/AkashKarnatak/Aaggu.git
+   git clone https://github.com/Tanush-gupta/Random-Video-Chat
    ```
 
 2. Navigate to the project directory:
