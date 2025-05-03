@@ -150,7 +150,7 @@ wss.on("connection", (ws, req) => {
   // Increment and log traffic count
   trafficCount++;
   console.log(`New user connected. Current traffic count: ${trafficCount}`);
-
+  console.log("Total Current Users:", wss.clients.size);
   ws.init();
 
   ws.register("peopleOnline", () => {
