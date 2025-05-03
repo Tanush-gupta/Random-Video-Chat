@@ -7,7 +7,7 @@ dotenv.config();
 const SERVER_PORT = process.env.PORT;
 
 if (!SERVER_PORT) {
-  throw new Error("Forgot to initialze some variables");
+  throw new Error("Forgot to initialize some variables");
 }
 
 Array.prototype.random = function () {
@@ -50,6 +50,9 @@ WebSocket.prototype.propagate = function (channel, data) {
 
 const app = express();
 const port = SERVER_PORT;
+
+// Counter to track the number of visitors
+let trafficCount = 0;
 
 app.use(express.static("./public", { extensions: ["html"] }));
 
@@ -106,7 +109,7 @@ async function findPeer(user, interests, interestUserMap, userInterestMap) {
   }
 
   // couldn't find stranger's with common interests
-  // wait to see if other's are active
+  // wait to see if others are active
   addUser(user, interests, interestUserMap, userInterestMap);
   await sleep(6000);
   if (user.peer) return [user.peer, []];
@@ -144,7 +147,9 @@ wss.textInterestUserMap = new Map();
 wss.videoUserInterestMap = new Map();
 wss.videoInterestUserMap = new Map();
 wss.on("connection", (ws, req) => {
-  console.log("new connection");
+  // Increment and log traffic count
+  trafficCount++;
+  console.log(`New user connected. Current traffic count: ${trafficCount}`);
 
   ws.init();
 
@@ -166,7 +171,7 @@ wss.on("connection", (ws, req) => {
       ws.interestUserMap,
       ws.userInterestMap
     );
-    // if peer exist
+    // if peer exists
     if (ws.peer) return;
 
     if (!peer) {
@@ -194,7 +199,6 @@ wss.on("connection", (ws, req) => {
       ws.send(JSON.stringify({ channel: "begin", data: "" }));
     }
   });
-
   ws.register("disconnect", async () => {
     if (!ws.peer) return;
     ws.peer.peer = undefined;
